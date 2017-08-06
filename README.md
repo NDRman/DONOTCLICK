@@ -16,3 +16,12 @@ Pro-Tips:
   
   
   ![alt text](Brief%20Snapshot.png)
+
+
+
+
+
+
+You can download it at:
+
+https://drive.google.com/folderview?id=0BxhSiU0AVAMDTmlmYTVVOF9jdzQ
