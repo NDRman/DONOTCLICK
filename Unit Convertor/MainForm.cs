@@ -40,15 +40,17 @@ namespace UnitConvertor
         {
             Globals.units.Add("mtpa", 1);
             Globals.units.Add("tcm", 0.00138026224);
-            Globals.units.Add("tcf", 0.04777830864);
-            Globals.units.Add("mmbtu", 49257899);
+            Globals.units.Add("tcf", 0.0487);
+            Globals.units.Add("mmbtu", 52000000);
             Globals.units.Add("mwh", 14447205);
             Globals.units.Add("therm", 492578990);
             Globals.units.Add("gj", 52009937);
-            Globals.units.Add("mmtoe", 1.2422360248877);
-            Globals.units.Add("mmboe", 8.8731144634839);
-            Globals.units.Add("bcf", 47.77830864);
-            Globals.units.Add("bcm", 1.38026224);
+            Globals.units.Add("mmtoe", 1.23);
+            Globals.units.Add("mmboe", 8.68);
+            Globals.units.Add("bcf", 48.7);
+            Globals.units.Add("bcm", 1.38);
+            Globals.units.Add("mcf", 48700);
+            Globals.units.Add("mcm", 1380);
             Globals2.sc.Language = "VBScript";
 
         }
@@ -278,7 +280,7 @@ namespace UnitConvertor
         {
             if (GJ.ContainsFocus)
             {
- //               
+                
                 try
                 {
                     double result = Globals2.sc.Eval(GJ.Text);
@@ -397,10 +399,15 @@ namespace UnitConvertor
                 CUBICFEET.Text = "bcf";
                 tmp = "tcf";
             }
+            else if (CUBICFEET.Text == "bcf")
+            {
+                CUBICFEET.Text = "mcf";
+                tmp = "bcf";
+            }
             else
             {
                 CUBICFEET.Text = "tcf";
-                tmp = "bcf";
+                tmp = "mcf";
             }
 
             if (TCF.ContainsFocus)
@@ -430,10 +437,15 @@ namespace UnitConvertor
                 CUBICMETERS.Text = "bcm";
                 tmp = "tcm";
             }
+            else if (CUBICMETERS.Text == "bcm")
+            {
+                CUBICMETERS.Text = "mcm";
+                tmp = "bcm";
+            }
             else
             {
                 CUBICMETERS.Text = "tcm";
-                tmp = "bcm";
+                tmp = "mcm";
             }
 
             if (TCM.ContainsFocus)
@@ -451,9 +463,9 @@ namespace UnitConvertor
                     TCM.Text = "";
                 }
 
-                
+
             }
-            
+
 
         }
     }
